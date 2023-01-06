@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+<!-- Override content block in layout -->
+{% block content %}
+    <h1>Add New Book</h1>
+    <form action="/addBook/" method="POST">
+        {% csrf_token %}
+        <label for="title">Title: </label>
+        {{book.title}}
+        <br><br>
+        <label for="author">Author: </label>
+        {{book.author}}
+        <br><br>
+        <label for="year">Year: </label>
+        {{book.year}}
+        <br><br>
+        <label for="rating">Rating: </label>
+        {{book.rating}}
+        <br><br>
+        <label for="description">Description: </label>
+        {{book.description}}
+        <br><br>
+        <button>Add Book</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Query Book By ID</h1>
+    <form action="/queryBook/" method="POST">
+        {% csrf_token %}
+        <label for="id">Book ID: </label>
+        <input id="id" name="id" />
+        <br><br>
+        <button>Search</button>
+    </form>
+{% endblock %}
